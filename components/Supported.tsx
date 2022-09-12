@@ -1,9 +1,11 @@
 import Image from 'next/image';
+import Img from 'next/image';
 import React from 'react'
 import Pm from '../assets/em.png'
 import El from '../assets/El.png'
 import Ms from '../assets/Ms.png'
 import Center from '../assets/center.png'
+import Ce from '../assets/ce.png'
 
 interface SupportedProps {
 
@@ -92,9 +94,12 @@ const Supported: React.FC<SupportedProps> = ({}) => {
                     </div>
                 </div>
                 <div className=''>
-                    <div className='absolute top-[50%] left-[25%]'>
-                    <Image src={Center} />
+                    <div className='absolute top-[50%] left-[25%] z-[2]'>
+                    <Image src={Center} className='z-1' />
 
+                    </div>
+                    <div className='absolute area left-[10rem] bottom-[18%]'>
+                    <Image src={Ce} className='z-[1]' />
                     </div>
                 </div>
                 <div className='bg-[#637A6F] mt-[-13rem] bordered'>

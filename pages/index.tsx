@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Coaching from '../components/Coaching'
 import Layout from '../components/Layout'
 import Main from '../components/Main'
 import Supported from '../components/Supported'
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
         </Head>
         <Main />
         <Supported />
+        <Coaching />
       </Layout>
   )
 }

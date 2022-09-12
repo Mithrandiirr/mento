@@ -38,3 +38,21 @@ img {
 .bordered {
     border-radius: 0px 0px 0px 100px;
 }
+.area::after{
+  content: '';
+  position: absolute;
+  background: #D7E1DB;
+  width: 439.49px;
+  height: 220.19px;
+  left: 14.2px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  border-bottom: 0;
+  transform: rotate(3.21deg);
+  top: 15px;
+}
+.rounded-coaching {
+  border-radius: 100px 0 0 0 ;
+}
+.rounded-mentoring  {
+  border-radius: 0 0 100px 0  ;
+}
