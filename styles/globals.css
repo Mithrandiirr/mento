@@ -1,26 +1,40 @@
-html,
+/* @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap'); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection{
+    background-color: #F1704C;
+    color: white;
+}
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Sora';
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
-
 * {
   box-sizing: border-box;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.pic{
+    border-radius: 0px 0px 0px 100px;
+    filter: brightness(0.8);
+}
+.css-abs {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.shadowed {
+    box-shadow: 4px 4px 1px 1px #d7e1db;
+    border-radius: 8px;
+}
+img {
+    user-select: none;
+}
+.bordered {
+    border-radius: 0px 0px 0px 100px;
 }
