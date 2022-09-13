@@ -41,48 +41,66 @@ console.log(supported)
                     </div>
                 </div>
                 <div className='flex flex-col gap-[41px] bg-[#EDF2F0] h-[574px]'>
-                    <div className='flex flex-row mx-[136px] mt-[120px] items-center gap-[19px]'>
+                    {supported.discussions[0] &&
+                    (
+                        <div className='flex flex-row ml-[124px]  mr-[177px]  mt-[120px] items-center gap-[19px]'>
                         <div className='mt-[-1rem]'>
-                            <Image src={Pm}  />
+                            <Img src={urlFor(supported.discussions[0].image).url()} width={40} height={40} className='rounded-[50%]'  />
                         </div>
                         <div className='flex flex-col gap-[9px] items-start flex-1 '>
                         <span className='text-black font-normal text-[14px] leading-[140%] bg-white px-[15px] py-[10px] shadowed rounded-[8px]'>
-                        Tackle burnout and find your fuel. Tackle burnout and find your fuel
+                        {supported.discussions[0].text}
                         </span>
-                        <h4 className='text-[#505A54] font-normal text-[14px] leading-[140%]'>Project Manager</h4>
+                        <h4 className='text-[#505A54] font-normal text-[14px] leading-[140%]'>{supported.discussions[0].responsible}</h4>
                         </div>
                     </div>
-                    <div className='flex flex-row mx-[136px] items-center gap-[19px]'>
-                    <div className='flex flex-col gap-[9px] items-end flex-1 '>
+                    )
+                    }
+                  
+                    <div className='flex flex-row ml-[124px] mr-[177px] items-center gap-[19px]'>
+                        {supported.discussions[1] && 
+                        (
+                            <>
+                       <div className='flex flex-col gap-[9px] items-end flex-1 '>
                         <span className='text-black font-normal text-[14px] leading-[140%] bg-white px-[15px] py-[10px] shadowed rounded-[8px]'>
-                        Tackle burnout and find your fuel. Tackle burnout and find your fuel
+                       { supported.discussions[1].text}
                         </span>
-                        <h4 className='text-[#505A54] font-normal text-[14px] leading-[140%]'>Engineering Lead</h4>
+                        <h4 className='text-[#505A54] font-normal text-[14px] leading-[140%]'>{supported.discussions[1].responsible }</h4>
                         </div>
                         <div className='mt-[-1rem]'>
-                            <Image src={El}  />
+                        <Img src={urlFor(supported.discussions[1].image).url()} width={40} height={40} className='rounded-[50%]'  />
                         </div>
+                            </>
+                        )
+                        }
+
                        
                     </div>
-                    <div className='flex flex-row mx-[136px]  items-center gap-[19px]'>
+                    {supported.discussions[2] && 
+                        (
+                    <div className='flex flex-row ml-[180px] mr-[124px] items-center gap-[19px]'>
                         <div className='mt-[-1rem]'>
-                            <Image src={Ms}  />
+                            <Img src={urlFor(supported.discussions[2].image).url()} width={40} height={40} className='rounded-[50%]'  />
                         </div>
-                        <div className='flex flex-col gap-[9px] items-start flex-1 '>
+                       <div className='flex flex-col gap-[9px] items-end flex-1 '>
                         <span className='text-black font-normal text-[14px] leading-[140%] bg-white px-[15px] py-[10px] shadowed rounded-[8px]'>
-                        Tackle burnout and find your fuel. Tackle burnout and find your fuel
+                       {supported.discussions[2].text}
                         </span>
-                        <h4 className='text-[#505A54] font-normal text-[14px] leading-[140%]'>Marketing Specialist</h4>
+                        <h4 className='text-[#505A54] font-normal text-[14px] leading-[140%]'>{supported.discussions[2].responsible }</h4>
                         </div>
+                           
                     </div>
+                           )
+                        }
+
                 </div>
                 <div className=''>
                     <div className='absolute top-[50%] left-[25%] z-[2]'>
-                    <Img src={urlFor(supported.centeredvector).url()} width={447.9} height={328} className='z-1' />
+                    <Img src={urlFor(supported.centeredvector).url()} width={447.9} height={328} className='z-[1]' />
 
                     </div>
                     <div className='absolute area left-[10rem] bottom-[18%]'>
-                    <Image src={Ce} className='z-[1]' />
+                    <Img src={urlFor(supported.image).url()} width={430} height={245} className='z-[1]' />
                     </div>
                 </div>
                 <div className='bg-[#637A6F] mt-[-13rem] bordered'>
