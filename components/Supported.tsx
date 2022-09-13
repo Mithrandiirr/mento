@@ -6,54 +6,37 @@ import El from '../assets/El.png'
 import Ms from '../assets/Ms.png'
 import Center from '../assets/center.png'
 import Ce from '../assets/ce.png'
+import client from '../client';
+import imageUrlBuilder from "@sanity/image-url"
+import { SanityImageSource } from "@sanity/image-url/lib/types/types"
 
 interface SupportedProps {
-
+    supported : any
 }
 
-const Supported: React.FC<SupportedProps> = ({}) => {
+const Supported: React.FC<SupportedProps> = ({supported}) => {
+    const builder = imageUrlBuilder(client)
+    const urlFor = (source: SanityImageSource) => {
+    return builder.image(source)
+} 
+console.log(supported)
         return (
             <div className='grid grid-cols-2 relative'>
                 <div className='bg-[#505A54]'>
                     <div className='text-white my-[151px] mx-[159px]'>
-                        <h1 className='font-bold w-[349px] text-[42px] leading-[53px] '>Feel supported, not burnt out</h1>
+                        <h1 className='font-bold w-[349px] text-[42px] leading-[53px] '>{supported.supportedtitle}</h1>
                         <ul className='mt-[36px] w-[358px] flex flex-col font-normal text-[18px] gap-8 leading-[140%]'>
-                            <li className='flex flex-row gap-[24px] items-center'>
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="6" cy="6" r="6" fill="#F2C0F0"/>
-                                </svg>
-
-                                <span className='flex-1'>Tackle burnout and find your fuel</span></li>
+                            {supported.supportedlist.map((sup : any) => 
+                            (
                                 <li className='flex flex-row gap-[24px] items-center'>
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="6" cy="6" r="6" fill="#F2C0F0"/>
-                                </svg>
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="6" cy="6" r="6" fill="#F2C0F0"/>
+                                    </svg>
+    
+                                    <span className='flex-1'>{sup}</span>
+                                </li>
+                            ))}
 
-                                <span className='flex-1'>Deepen your focus</span></li>
-                                <li className='flex flex-row gap-[24px] items-center'>
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="6" cy="6" r="6" fill="#F2C0F0"/>
-                                </svg>
-
-                                <span className='flex-1'>Find work-life balance</span></li>
-                                <li className='flex flex-row gap-[24px] items-center'>
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="6" cy="6" r="6" fill="#F2C0F0"/>
-                                </svg>
-
-                                <span className='flex-1'>Increase your efficiency without sacrificing your health</span></li>
-                                <li className='flex flex-row gap-[24px] items-center'>
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="6" cy="6" r="6" fill="#F2C0F0"/>
-                                </svg>
-
-                                <span className='flex-1'>Get help tackling daily challenges</span></li>
-                                <li className='flex flex-row gap-[24px] items-center'>
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="6" cy="6" r="6" fill="#F2C0F0"/>
-                                </svg>
-
-                                <span className='flex-1'> Stress less, feel happier  </span></li>
                         </ul>
                     </div>
                 </div>
@@ -95,7 +78,7 @@ const Supported: React.FC<SupportedProps> = ({}) => {
                 </div>
                 <div className=''>
                     <div className='absolute top-[50%] left-[25%] z-[2]'>
-                    <Image src={Center} className='z-1' />
+                    <Img src={urlFor(supported.centeredvector).url()} width={447.9} height={328} className='z-1' />
 
                     </div>
                     <div className='absolute area left-[10rem] bottom-[18%]'>

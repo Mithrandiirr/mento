@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
-import Pic from '../assets/bag.jpg'
 import Ln from '../assets/linkedin.png'
 import Sl from '../assets/sl.png'
 import Nf from '../assets/nf.png'
