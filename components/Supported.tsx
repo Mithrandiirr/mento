@@ -82,7 +82,7 @@ console.log(supported)
                         <div className='mt-[-1rem]'>
                             <Img src={urlFor(supported.discussions[2].image).url()} width={40} height={40} className='rounded-[50%]'  />
                         </div>
-                       <div className='flex flex-col gap-[9px] items-end flex-1 '>
+                       <div className='flex flex-col gap-[9px] items-start flex-1 '>
                         <span className='text-black font-normal text-[14px] leading-[140%] bg-white px-[15px] py-[10px] shadowed rounded-[8px]'>
                        {supported.discussions[2].text}
                         </span>
