@@ -45,7 +45,7 @@ console.log(supported)
                     (
                         <div className='flex flex-row ml-[124px]  mr-[177px]  mt-[120px] items-center gap-[19px]'>
                         <div className='mt-[-1rem]'>
-                            <Img src={urlFor(supported.discussions[0].image).url()} width={40} height={40} className='rounded-[50%]'  />
+                            <Img key={supported.discussions[0]._id} src={urlFor(supported.discussions[0].image).url()} width={40} height={40} className='rounded-[50%]'  />
                         </div>
                         <div className='flex flex-col gap-[9px] items-start flex-1 '>
                         <span className='text-black font-normal text-[14px] leading-[140%] bg-white px-[15px] py-[10px] shadowed rounded-[8px]'>
@@ -68,7 +68,7 @@ console.log(supported)
                         <h4 className='text-[#505A54] font-normal text-[14px] leading-[140%]'>{supported.discussions[1].responsible }</h4>
                         </div>
                         <div className='mt-[-1rem]'>
-                        <Img src={urlFor(supported.discussions[1].image).url()} width={40} height={40} className='rounded-[50%]'  />
+                        <Img key={supported.discussions[1]._id} src={urlFor(supported.discussions[1].image).url()} width={40} height={40} className='rounded-[50%]'  />
                         </div>
                             </>
                         )
@@ -80,7 +80,7 @@ console.log(supported)
                         (
                     <div className='flex flex-row ml-[180px] mr-[124px] items-center gap-[19px]'>
                         <div className='mt-[-1rem]'>
-                            <Img src={urlFor(supported.discussions[2].image).url()} width={40} height={40} className='rounded-[50%]'  />
+                            <Img key={supported.discussions[2]._id}  src={urlFor(supported.discussions[2].image).url()} width={40} height={40} className='rounded-[50%]'  />
                         </div>
                        <div className='flex flex-col gap-[9px] items-start flex-1 '>
                         <span className='text-black font-normal text-[14px] leading-[140%] bg-white px-[15px] py-[10px] shadowed rounded-[8px]'>
