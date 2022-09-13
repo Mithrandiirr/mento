@@ -75,15 +75,15 @@ const Main: React.FC<MainProps> = ({main}) => {
                 <div className='flex flex-row gap-[75px] mt-[119px] ml-[121px] items-center pb-[83px]'>
                 {main.platforms.images.map((platform : any) => 
                 (
-                    <Img src={urlFor(platform).url()} width={110} height={30} alt="" />
+                    <Img key={platform._id} src={urlFor(platform).url()} width={110} height={30} alt="" />
                 ))}
                {main.platforms.images.map((platform : any) => 
                 (
-                    <Img src={urlFor(platform).url()} width={110} height={30} alt="" />
+                    <Img key={platform._id}  src={urlFor(platform).url()} width={110} height={30} alt="" />
                 ))}
                  {main.platforms.images.slice(0,1).map((platform : any) => 
                 (
-                    <Img src={urlFor(platform).url()} width={110} height={30} alt="" />
+                    <Img key={platform._id}  src={urlFor(platform).url()} width={110} height={30} alt="" />
                 ))}
                 {/* <Image src={Sl}  alt="Slack" />
                 <Image src={Nf}  alt="Netflix"/>
