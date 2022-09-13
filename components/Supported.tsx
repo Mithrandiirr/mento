@@ -28,7 +28,7 @@ console.log(supported)
                         <ul className='mt-[36px] w-[358px] flex flex-col font-normal text-[18px] gap-8 leading-[140%]'>
                             {supported.supportedlist.map((sup : any) => 
                             (
-                                <li className='flex flex-row gap-[24px] items-center'>
+                                <li  key={sup._id} className='flex flex-row gap-[24px] items-center'>
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="6" cy="6" r="6" fill="#F2C0F0"/>
                                     </svg>
